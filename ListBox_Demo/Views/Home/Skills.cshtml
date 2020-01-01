@@ -1,0 +1,12 @@
+﻿@model ListBox_Demo.Models.Language
+
+@{
+    ViewData["Title"] = "Skills";
+}
+
+<div class="form-group col-md-4">
+    <label asp-for="ProgrammingSkill" class="control-label"></label>
+    <select asp-for="ProgrammingSkill" asp-items="Model.ProgrammingSkill" size="5" multiple class="form-control"></select>
+    <span asp-validation-for="ProgrammingSkill" class="text-danger"></span>
+</div>
+

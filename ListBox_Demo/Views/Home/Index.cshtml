@@ -1,0 +1,11 @@
+﻿@model ListBox_Demo.Models.Skill
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="form-group col-md-4">
+    <label asp-for="ProgrammingLanguage" class="control-label"></label>
+    <select asp-for="Id" asp-items="ViewBag.Id" size="5" multiple class="form-control"></select>
+    <span asp-validation-for="ProgrammingLanguage" class="text-danger"></span>
+</div>
