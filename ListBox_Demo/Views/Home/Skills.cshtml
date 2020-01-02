@@ -4,8 +4,9 @@
     ViewData["Title"] = "Skills";
 }
 
+<h3>Skills ListBox without Database</h3>
+
 <div class="form-group col-md-4">
-    <label asp-for="ProgrammingSkill" class="control-label"></label>
     <select asp-for="ProgrammingSkill" asp-items="Model.ProgrammingSkill" size="5" multiple class="form-control"></select>
     <span asp-validation-for="ProgrammingSkill" class="text-danger"></span>
 </div>

@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+﻿using ListBox_Demo.Data;
 using ListBox_Demo.Models;
-using ListBox_Demo.Data;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Linq;
 
 namespace ListBox_Demo.Controllers
 {
@@ -22,7 +17,7 @@ namespace ListBox_Demo.Controllers
 
         public IActionResult Index()
         {
-            ViewData["Id"]=new SelectList(dbContext.Skills,"Id", "ProgrammingLanguage");
+            ViewData["Id"] = new SelectList(dbContext.Skills, "Id", "ProgrammingLanguage");
             return View();
         }
 
@@ -33,6 +28,6 @@ namespace ListBox_Demo.Controllers
             return View(model);
         }
 
-       
+
     }
 }
